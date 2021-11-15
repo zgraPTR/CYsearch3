@@ -12,7 +12,6 @@ namespace CYsearch3
 
 
         //グローバル
-
         //jsonクラス初期化
         Json_ jj = new Json_();
 
@@ -43,9 +42,7 @@ namespace CYsearch3
         {
             //時間計算
             int time = ((int)second_nun.Value * 1000) + ((int)minute_nun.Value * 60000);
-
             //jsonファイル情報
-
             Json_info json_data = new Json_info
             {
                 check_livename = livename_check.Checked,
@@ -60,10 +57,8 @@ namespace CYsearch3
                 wait_time = time
             };
 
-
             //書き込む
             jj.Write_json(json_data);
-
             //終了
             this.Close();
         }
@@ -72,17 +67,17 @@ namespace CYsearch3
         //リセットボタン
         private void reset_button_Click(object sender, EventArgs e)
         {
-
             //確認
             DialogResult result = MessageBox.Show("設定をリセットしますか?", "確認", MessageBoxButtons.YesNo);
 
             //分岐
             if (result == DialogResult.OK)
             {
+                //jsonを初期化する
                 jj.Create_json();
                 MessageBox.Show("設定をリセットしました");
             }
-
         }
+
     }
 }

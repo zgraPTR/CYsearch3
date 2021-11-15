@@ -9,10 +9,8 @@ namespace CYsearch3
     {
         //チェック 配信名、ユーザー名、 定期
         public bool check_livename, check_othername, check_timer;
-
         //配信者名、 リスナー名
         public string live_name, other_name;
-
         //定期検索時間保存
         public int minute, second, wait_time;
     }
@@ -21,12 +19,9 @@ namespace CYsearch3
     //json系クラス
     public class Json_
     {
-
         //グローバル
-
         //json名
         public static string json_file = "setting.json";
-
 
         //jsonファイル作成
         public void Create_json()
@@ -43,11 +38,9 @@ namespace CYsearch3
                 second = 0,
                 wait_time = 0
             };
-
             //書き込む
             Write_json(json_data);
         }
-
         
         //json書き換え
         public void Write_json(Json_info info)
@@ -57,7 +50,6 @@ namespace CYsearch3
             File.WriteAllText(json_file ,json_text);
         }
 
-
         //jsonファイルロード
         public Json_info Load_json()
         {
@@ -65,8 +57,6 @@ namespace CYsearch3
             string load_json = File.ReadAllText(json_file);
             return JsonConvert.DeserializeObject<Json_info>(load_json);
         }
-
-
     }
 
 }
