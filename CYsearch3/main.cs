@@ -39,7 +39,6 @@ namespace CYsearch3
         }
 
 
-        //設定ボタン
         private void sseting_button_Click(object sender, EventArgs e)
         {
             using (var setting = new setting())
@@ -51,14 +50,12 @@ namespace CYsearch3
         }
 
 
-        //検索ボタン
         private void button1_Click(object sender, EventArgs e)
         {
             run_search();
         }
 
 
-        //検索関数
         private void run_search()
         {
             if (livename_text.Text == "" || other_name.Text == "")
@@ -89,7 +86,6 @@ namespace CYsearch3
         }
 
 
-        //検索開始
         private void search_bgwork_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             List<string> search_result = new List<string>();

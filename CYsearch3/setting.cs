@@ -27,7 +27,6 @@ namespace CYsearch3
         }
 
 
-        //終了
         private void exit_button_Click(object sender, EventArgs e)
         {
             int time = ((int)second_nun.Value * 1000) + ((int)minute_nun.Value * 60000);
@@ -47,7 +46,6 @@ namespace CYsearch3
         }
 
 
-        //リセットボタン
         private void reset_button_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("設定をリセットしますか?", "確認", MessageBoxButtons.YesNo);
