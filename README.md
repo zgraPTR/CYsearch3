@@ -1,6 +1,6 @@
 # CYsearch3
 
-## 次作: CYsearch4
+### 次作: CYsearch4
 - Youtubeの配信名からリスナーと配信一覧を取得します。
 - CYsearch3よりも高速なスピードでの配信検索
 
